@@ -3,8 +3,8 @@ public class Main {
 
         System.out.println(Thread.currentThread().getName());
 
-        MyThread myRunnnable1 = new MyThread("Thread no 1");
-        Thread newThread1 = new Thread(myRunnnable1, "Thread_1");
+        MyThread myRunnable1 = new MyThread("Thread no 1");
+        Thread newThread1 = new Thread(myRunnable1, "Thread_1");
         newThread1.start();
         System.out.println(newThread1.getName());
 
@@ -14,9 +14,10 @@ public class Main {
         newThread2.start();
 
         Thread.sleep(10000);
+        myRunnable1.turnOffSafely();
 
-        myRunnnable1.turnOffSafely();
+        Thread.sleep(3000);
+        myRunnable2.turnOffSafely();
 
     }
-
 }

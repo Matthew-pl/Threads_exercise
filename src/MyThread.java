@@ -11,7 +11,7 @@ public class MyThread implements Runnable {
     }
 
     public synchronized void turnOffSafely () {
-//        System.out.println("Turning off " + this.name);
+        System.out.println("Turning off " + this.name);
         this.stop = true;
     }
 
